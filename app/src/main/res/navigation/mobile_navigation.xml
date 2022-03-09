@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.outsports.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_setupFragment"
+            app:destination="@id/setupFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_activityTrackingFragment"
+            app:destination="@id/activityTrackingFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_accessionGroupFragment"
+            app:destination="@id/accessionGroupFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.outsports.ui.statistics.StatisticsFragment"
+        android:label="@string/title_statistics"
+        tools:layout="@layout/fragment_statistics">
+        <action
+            android:id="@+id/action_navigation_dashboard_to_statisticsMonthsFragment"
+            app:destination="@id/statisticsMonthsFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_seeActivityFragment"
+            app:destination="@id/seeActivityFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_self"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.outsports.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_notifications_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.example.outsports.ui.setup.SetupFragment"
+        android:label="@string/title_setup"
+        tools:layout="@layout/fragment_setup">
+        <action
+            android:id="@+id/action_setupFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/statisticsMonthsFragment"
+        android:name="com.example.outsports.ui.statistics_months.StatisticsMonthsFragment"
+        android:label="@string/title_statistics_months"
+        tools:layout="@layout/fragment_statistics_months">
+        <action
+            android:id="@+id/action_statisticsMonthsFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_statisticsMonthsFragment_to_seeActivityFragment"
+            app:destination="@id/seeActivityFragment" />
+        <action
+            android:id="@+id/action_statisticsMonthsFragment_self"
+            app:destination="@id/statisticsMonthsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/activityTrackingFragment"
+        android:name="com.example.outsports.ui.activity_tracking.ActivityTrackingFragment"
+        android:label="@string/title_activity_tracking"
+        tools:layout="@layout/fragment_activity_tracking">
+        <action
+            android:id="@+id/action_activityTrackingFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.outsports.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/seeActivityFragment"
+        android:name="com.example.outsports.ui.activity_tracking.SeeActivityFragment"
+        android:label="View Activity">
+        <action
+            android:id="@+id/action_seeActivityFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_seeActivityFragment_to_statisticsMonthsFragment"
+            app:destination="@id/statisticsMonthsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.example.outsports.ui.group.CreateGroupFragment"
+        android:label="@string/create_group">
+        <action
+            android:id="@+id/action_createGroupFragment_to_activityTrackingFragment"
+            app:destination="@id/activityTrackingFragment" />
+        <action
+            android:id="@+id/action_createGroupFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/accessionGroupFragment"
+        android:name="com.example.outsports.ui.group.AccessionGroupFragment"
+        android:label="@string/title_group_accession">
+        <action
+            android:id="@+id/action_accessionGroupFragment_to_activityTrackingFragment"
+            app:destination="@id/activityTrackingFragment" />
+        <action
+            android:id="@+id/action_accessionGroupFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+
+</navigation>

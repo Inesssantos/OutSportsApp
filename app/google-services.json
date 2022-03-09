@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "702000858542",
+    "project_id": "outsports",
+    "storage_bucket": "outsports.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702000858542:android:f96c16d98d3ec56431743f",
+        "android_client_info": {
+          "package_name": "com.example.outsports"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702000858542-b9l5meog6069mh4vogpf1ttn3qktndu2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwxWG4QRX-CEWi_VXVMOpQZRVIvQ_d0jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702000858542-b9l5meog6069mh4vogpf1ttn3qktndu2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

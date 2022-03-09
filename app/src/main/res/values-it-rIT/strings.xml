@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">Le tue corse</string>
+    <string name="title_statistics">Statistiche</string>
+    <string name="title_profile">Profilo</string>
+    <string name="title_setup">Impostare</string>
+    <string name="title_statistics_months">Statistiche mensili</string>
+    <string name="title_activity_tracking">Monitoraggio delle attività</string>
+    <string name="title_settings">Impostazioni</string>
+    <string name="title_see_activity">Visualizzare attività</string>
+    <string name="welcome">Benvenuto! Inserisci i tuoi dati personali.</string>
+    <string name="your_name">Il tuo nome</string>
+    <string name="your_height">La vostra altezza</string>
+    <string name="your_weight">Il tuo peso</string>
+    <string name="apply_changes">Applica i cambiamenti</string>
+    <string name="setupvalues">Continua</string>
+    <string name="err">Errore</string>
+    <string name="create_group">Creare un gruppo</string>
+    <string name="join_group">Unirsi al gruppo</string>
+    <string name="leave_group">Lascia il gruppo</string>
+    <string name="start">Inizia l\'attività</string>
+    <string name="satellite">Satellitare</string>
+    <string name="terrain">Terreno</string>
+    <string name="normal">Normale</string>
+    <string name="metric">Metrico (km)</string>
+    <string name="imperial">Imperiale (mi)</string>
+    <string name="kilograms">Chilogrammi (kg)</string>
+    <string name="pounds">Libbre (lb)</string>
+    <string name="centimeters">Centimetri (cm)</string>
+    <string name="foot">Piede (ft)</string>
+    <string name="portuguese">Portoghese</string>
+    <string name="english">Inglese</string>
+    <string name="italian">Italiano</string>
+    <string name="select_the_language">Seleziona la lingua</string>
+    <string name="select_units_for_height">Seleziona le unità per l\'altezza</string>
+    <string name="select_units_for_weight">Selecione unidades de peso</string>
+    <string name="select_units_for_distance">Seleziona le unità per la distanza</string>
+    <string name="annual_race_statistics">Statistiche di gara annuali</string>
+    <string name="more">Di Più</string>
+    <string name="recent_activities">Attività recenti</string>
+    <string-array name="months">
+        <item>Gennaio</item>
+        <item>Febbraio</item>
+        <item>Marzo</item>
+        <item>Aprile</item>
+        <item>Maggio</item>
+        <item>Giugno</item>
+        <item>Luglio</item>
+        <item>Agosto</item>
+        <item>Settembre</item>
+        <item>Ottobre</item>
+        <item>Novembre</item>
+        <item>Dicembre</item>
+    </string-array>
+
+    <string-array name="weight_status_names">
+        <item>Sottopeso</item>
+        <item>Peso ottimale</item>
+        <item>Sovrappeso</item>
+        <item>Obeso</item>
+        <item>Estremamente obeso</item>
+    </string-array>
+
+    <string name="average_pace">Ritmo medio</string>
+    <string name="total_calories_burned">Calories Burned</string>
+    <string name="total_time">Tempo totale</string>
+    <string name="total_distance">Distanza totale</string>
+    <string name="pause">Pausa</string>
+    <string name="stop">Finire</string>
+    <string name="resume">Continua</string>
+    <string name="activities">Attività</string>
+    <string name="noactivity_recorded">Nessuna Attività Registrata</string>
+    <string name="your_email">La tua email</string>
+    <string name="your_birthday">Il tuo compleanno</string>
+    <string name="birthday_error">Data di nascita non valida, deve avere più di 5 anni. Per favore, inserisci una data valida</string>
+
+    <string-array name="name_day_of_week">
+        <item>Domenica</item>
+        <item>Lunedì</item>
+        <item>Martedì</item>
+        <item>Mercoledì</item>
+        <item>Giovedì</item>
+        <item>Venerdì</item>
+        <item>Sabato</item>
+    </string-array>
+    <string name="delete_activity_title">Elimina Attività</string>
+    <string name="delete_activity_message">Sei sicuro di voler eliminare questa attività?</string>
+    <string name="mensage_group_create">Gruppo creato con successo</string>
+    <string name="group_name">Il nome del gruppo</string>
+    <string name="group_distance">Distanza di sicurezza</string>
+    <string name="group_distance_switch_on">Attivato</string>
+    <string name="group_distance_switch_off">Disabilitato</string>
+    <string name="group_acess_denied">Accesso negato</string>
+    <string name="group_add_user_mensage">L\'utente %s vuole unirsi al gruppo, vuole consentire l\'accesso?</string>
+    <string name="group_add_user_title">Aggiungi Utente</string>
+    <string name="group_delete_user_mensage">cancellato con successo</string>
+    <string name="group_user_color_error_mensage">Il colore scelto è già stato assegnato a un altro utente</string>
+    <string name="fields_error">Si prega di compilare tutti i campi</string>
+    <string name="group_color_error">Scegli un colore per ogni utente</string>
+    <string name="save_sucess">Modifiche salvate</string>
+    <string name="group_min_user_error">Aggiungi utenti al gruppo</string>
+    <string name="group_choose">Scegli un gruppo</string>
+    <string name="group_available">Non ci sono gruppi disponibili</string>
+    <string name="title_group_accession">Attività di Gruppo</string>
+    <string name="group_name_error">Si prega di inserire il nome del gruppo</string>
+    <string name="group_distance_invalid_error">Inserisci la distanza tra %.2f e %.2f</string>
+    <string name="group_distance_error">Si prega di inserire la distanza</string>
+    <string name="save_activity_error">Errore durante il salvataggio dell\'attività</string>
+    <string name="save_activity_sucess">Attività salvata con successo</string>
+    <string name="activity_distance">Distanza</string>
+    <string name="activity_coordinates">Coordinate</string>
+    <string name="activity_coordinates_latitude">"Latitudine: "</string>
+    <string name="activity_coordinates_longitude">"Longitudine: "</string>
+    <string name="group_expel_user">Espellere l\'utente</string>
+    <string name="group_expel_user_mensage">Sei sicuro di voler espellere %s dal gruppo?</string>
+    <string name="group_distance_mensage">AVVERTIMENTO! l\'utente %s è troppo lontano da te</string>
+    <string name="activity_point_interest_name">Nome del punto di interesse</string>
+    <string name="activity_delete_point_interest_message">Sei sicuro di voler eliminare questo punto di interesse?</string>
+    <string name="activity_delete_point_interest_title">Elimina punto di interesse</string>
+
+</resources>

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalDistanceInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_distance"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvAveragePaceInfo"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalDistance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalDistance"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalDistanceInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalTimeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_time"
+
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalCaloriesInfo"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalTime"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/tvTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalTimeInfo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalCaloriesInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_calories_burned"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalCalories"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalCalories"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.838" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalCaloriesInfo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAveragePaceInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/average_pace"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/tvAveragePace"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="@+id/tvAveragePace"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAveragePace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAveragePaceInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/trackmapview"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:context="com.example.mapwithmarker.MapsMarkerActivity">
+
+    </androidx.fragment.app.FragmentContainerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_parent_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_arrow_drop_up_24"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/trackmapview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="65dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_parent_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_parent_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_parent_activity"
+        app:maxImageSize="65dp"
+        app:srcCompat="@drawable/ic_baseline_pause_circle_outline_24" />
+
+    <TextView
+        android:id="@+id/tv_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="#FFFFFF"
+        android:text="@string/pause"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_pause"
+        app:layout_constraintStart_toEndOf="@+id/fab_pause"
+        app:layout_constraintTop_toTopOf="@+id/fab_pause" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_parent_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_parent_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_parent_activity"
+        app:maxImageSize="65dp"
+        app:srcCompat="@drawable/ic_baseline_play_circle_outline_24" />
+
+    <TextView
+        android:id="@+id/tv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="@string/resume"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_start"
+        app:layout_constraintStart_toEndOf="@+id/fab_start"
+        app:layout_constraintTop_toTopOf="@+id/fab_start" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_pause"
+        app:layout_constraintEnd_toEndOf="@+id/fab_pause"
+        app:layout_constraintStart_toStartOf="@+id/fab_pause"
+        app:maxImageSize="50dp"
+        app:srcCompat="@drawable/ic_baseline_stop_24" />
+
+    <TextView
+        android:id="@+id/tv_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="#FFFFFF"
+        android:text="@string/stop"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_stop"
+        app:layout_constraintStart_toEndOf="@+id/fab_stop"
+        app:layout_constraintTop_toTopOf="@+id/fab_stop" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_parent_group_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_group_24"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_parent_map_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_parent_map_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_parent_map_activity"
+        app:maxImageSize="35dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_edit_group_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_person_remove_24"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_parent_group_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_parent_group_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_parent_group_activity"
+        app:maxImageSize="35dp" />
+
+    <TextView
+        android:id="@+id/tv_edit_group_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#FFFFFF"
+        android:text="@string/group_expel_user"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_edit_group_activity"
+        app:layout_constraintStart_toEndOf="@+id/fab_edit_group_activity"
+        app:layout_constraintTop_toTopOf="@+id/fab_edit_group_activity" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_leave_group_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_exit_to_app_24"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_edit_group_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_edit_group_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_edit_group_activity"
+        app:maxImageSize="35dp" />
+
+    <TextView
+        android:id="@+id/tv_leave_group_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#FFFFFF"
+        android:text="@string/leave_group"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_leave_group_activity"
+        app:layout_constraintStart_toEndOf="@+id/fab_leave_group_activity"
+        app:layout_constraintTop_toTopOf="@+id/fab_leave_group_activity" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_parent_map_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_layers_24"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/trackmapview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="35dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_satellite_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_parent_map_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_parent_map_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_parent_map_activity"
+        app:maxImageSize="35dp"
+        app:srcCompat="@drawable/ic_baseline_satellite_24" />
+
+    <TextView
+        android:id="@+id/tv_satellite_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#FFFFFF"
+        android:text="@string/satellite"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_satellite_activity"
+        app:layout_constraintStart_toEndOf="@+id/fab_satellite_activity"
+        app:layout_constraintTop_toTopOf="@+id/fab_satellite_activity" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_terrain_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_satellite_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_satellite_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_satellite_activity"
+        app:maxImageSize="35dp"
+        app:srcCompat="@drawable/ic_baseline_terrain_24" />
+
+    <TextView
+        android:id="@+id/tv_terrain_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#FFFFFF"
+        android:text="@string/terrain"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_terrain_activity"
+        app:layout_constraintStart_toEndOf="@+id/fab_terrain_activity"
+        app:layout_constraintTop_toTopOf="@+id/fab_terrain_activity" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_normal_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_terrain_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_terrain_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_terrain_activity"
+        app:maxImageSize="35dp"
+        app:srcCompat="@drawable/ic_baseline_panorama_24" />
+
+    <TextView
+        android:id="@+id/tv_normal_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#FFFFFF"
+        android:text="@string/normal"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_normal_activity"
+        app:layout_constraintStart_toEndOf="@+id/fab_normal_activity"
+        app:layout_constraintTop_toTopOf="@+id/fab_normal_activity" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_points_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/fab_parent_group_activity"
+        app:layout_constraintEnd_toEndOf="@+id/fab_parent_group_activity"
+        app:layout_constraintStart_toStartOf="@+id/fab_parent_group_activity"
+        app:maxImageSize="35dp"
+        app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
